@@ -30,8 +30,8 @@ public class CarsController {
 
 
     @GetMapping()
-    public String index(@RequestParam(value = "count", defaultValue = "5") int count, Model model) {
-        model.addAttribute("car", car.returningCarListCount(count));
+    public String getCarList(@RequestParam(value = "count", defaultValue = "5") int count, Model model) {
+        model.addAttribute("car", car.getCarList(count));
         return "carListCount";
     }
 
